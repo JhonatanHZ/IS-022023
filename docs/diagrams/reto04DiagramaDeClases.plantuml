@@ -1,0 +1,38 @@
+@startuml DiagramaDeClases
+
+Jugador --|> Persona
+Entrenador --|> Persona
+Jugador "6...20"--o "1    " Equipo
+Entrenador "1" --o "*" Equipo
+Partido " *  " --o "2" Equipo 
+
+class Equipo{
+    - Capitan: string
+    - Nombre: string
+    - Registro
+}
+
+class Persona{
+    - Nombre: string
+    - Telefono: int
+    - Direccion: string
+}
+
+
+class Jugador{
+    - Capitan: bool
+    - Numero: int
+    - Posicion: string
+}
+
+class Entrenador{
+    - Acreditacion
+    - Experiencia
+}
+
+class Partido{
+    - Localidad: string
+    - Puntuacion: int
+}
+
+@enduml
