@@ -58,7 +58,7 @@ object "Entrenador1: Entrenador" as DT1{
 object "Entrenador2: Entrenador" as DT2{
     nombre = "Ancceloti"
     telefono = 0412-2014222
-    direccion = "Santa Sicilia"
+    direccion = "Reggiolo"
     acreditacion = 100
     experiencia = "Entrenador del Real Madrid"
 }
@@ -71,6 +71,5 @@ C1  -u-o E1
 C2  -u-o E2
 DT1 -d-o E1
 DT2 -d-o E2
-
 
 @enduml
