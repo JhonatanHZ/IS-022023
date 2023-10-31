@@ -65,8 +65,8 @@ object "Entrenador2: Entrenador" as DT2{
 
 E1  -r-o P1: Juega en
 E2  -l-o P1: Juega en
-R1  -u-o E1
-R2  -u-o E2
+R1  -r-o E1
+R2  -l-o E2
 C1  -u-o E1
 C2  -u-o E2
 DT1 -d-o E1
