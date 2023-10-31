@@ -1,38 +1,44 @@
 @startuml DiagramaDeClases
 
-Jugador --|> Persona
-Entrenador --|> Persona
-Jugador "6...20"--o "1    " Equipo
-Entrenador "1" --o "*" Equipo
-Partido " *  " --o "2" Equipo 
+Jugador -d-|> Persona
+Entrenador -d-|> Persona
+Jugador "6...20"-u-o "1    " Equipo
+Entrenador "1" -u-o "*" Equipo
+Partido "1" o-d- "2" Equipo 
+Registro "1" -u-o Equipo 
 
 class Equipo{
-    - Capitan: string
-    - Nombre: string
-    - Registro
+    - nombre: string
+    - capitan: string
 }
 
 class Persona{
-    - Nombre: string
-    - Telefono: int
-    - Direccion: string
+    - nombre: string
+    - telefono: int
+    - direccion: string
 }
 
+class Registro{
+    - faltas:int
+    - puntos: int
+    - victorias: int
+    - derrotas: int
+}
 
 class Jugador{
-    - Capitan: bool
-    - Numero: int
-    - Posicion: string
+    - capitan: bool
+    - numero: int
+    - posicion: string
 }
 
 class Entrenador{
-    - Acreditacion
-    - Experiencia
+    - acreditacion:int
+    - experiencia:string
 }
 
 class Partido{
-    - Localidad: string
-    - Puntuacion: int
+    - localidad: string
+    - puntuacion: int
 }
 
 @enduml

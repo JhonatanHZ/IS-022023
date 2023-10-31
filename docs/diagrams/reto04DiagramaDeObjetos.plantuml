@@ -1,0 +1,76 @@
+@startuml DiagramaDeObjetos
+
+object "P1:Partido" as P1{
+    localidad = "Chile"
+    puntuacion = 3
+}
+
+object "E1:Equipo" as E1{
+    nombre = "Venezuela"
+    capitan = "Cao Wu"
+}
+
+object "E2:Equipo" as E2{
+    nombre = "Colombia"
+    capitan = "Eri Reis"
+}
+
+object "R1:Registro" as R1{
+    faltas = 7
+    puntos = 12
+    victorias = 4
+    derrotas = 1
+}
+
+object "R2:Registro" as R2{
+    faltas = 15
+    puntos = 6
+    victorias = 2
+    derrotas = 3
+}
+
+object "Capitan1:Jugador" as C1{
+    nombre = "Yavie"
+    telefono = 0424-1234567
+    direccion = "Los Teques"
+    capitan = true
+    numero = 7
+    posicion = "Zaguero centro"
+}
+
+object "Capitan2:Jugador" as C2{
+    nombre = "Daniel"
+    telefono = 0424-8910112
+    direccion = "El Silencio"
+    capitan = true
+    numero = 5
+    posicion = "Zaguero derecho"
+}
+
+object "Entrenador1: Entrenador" as DT1{
+    nombre = "Miguel"
+    telefono = 0424-4845185
+    direccion = "Colegio de Ingenieros"
+    acreditacion = 6
+    experiencia = "Entrenador del Niupi"
+}
+
+object "Entrenador2: Entrenador" as DT2{
+    nombre = "Ancceloti"
+    telefono = 0412-2014222
+    direccion = "Santa Sicilia"
+    acreditacion = 100
+    experiencia = "Entrenador del Real Madrid"
+}
+
+E1  -r-o P1: Juega en
+E2  -l-o P1: Juega en
+R1  -u-o E1
+R2  -u-o E2
+C1  -u-o E1
+C2  -u-o E2
+DT1 -d-o E1
+DT2 -d-o E2
+
+
+@enduml
