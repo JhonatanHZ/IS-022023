@@ -7,12 +7,12 @@ object "P1:Partido" as P1{
 
 object "E1:Equipo" as E1{
     nombre = "Venezuela"
-    capitan = "Cao Wu"
+    capitan = "Yavie"
 }
 
 object "E2:Equipo" as E2{
     nombre = "Colombia"
-    capitan = "Eri Reis"
+    capitan = "Daniel"
 }
 
 object "R1:Registro" as R1{
