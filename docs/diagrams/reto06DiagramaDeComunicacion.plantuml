@@ -1,0 +1,20 @@
+@startuml DiagramaDeComunicacion
+
+object ":Registro" as R1{
+
+}
+object ": Venta" as V1{
+
+}
+object ":Catalogo" as C1{
+
+}
+
+object ":Lista" as L1{
+
+}
+
+R1 "1: getEspecificacion(id)" ---|> C1
+R1 "2: crearLineaVenta(espec, cant)"--|> V1
+V1 "3: añadir(LineaVenta)" --|> L1
+@enduml

@@ -1,0 +1,14 @@
+@startuml DiagramaDeEstado
+
+[*] -r-> RecibiendoPedido : encargarProducto()
+RecibiendoPedido -r-> ValidandoPedido : colocarPedido()
+ValidandoPedido -r-> CobrandoPedido : cobrar()
+CobrandoPedido --> ObteniendoProducto : buscar()
+ObteniendoProducto -l-> DeterminandoUrgencia : envioUrgente()
+DeterminandoUrgencia -l-> EnviandoPedido : enviar()
+EnviandoPedido --> EnviandoRecibo : recibo()
+EnviandoPedido --> AñadiendoCliente : añadir()
+EnviandoRecibo --> [*]
+AñadiendoCliente --> [*]
+
+@enduml
