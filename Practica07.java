@@ -287,13 +287,11 @@ class ICentro extends JFrame implements ActionListener{
 class Empleado{
     public String cedula;
     public int cantidadEquipos = 0;
-    public float costoTotal = 0;
-    public boolean isInList = false; 
+    public float costoTotal = 0; 
 
     Empleado(String cedulaEmpleado, int cantidad, float costo){
         cedula = cedulaEmpleado;
         cantidadEquipos += cantidad;
         costoTotal += costo;
-        isInList = true;
     }
 }
