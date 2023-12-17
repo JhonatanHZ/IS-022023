@@ -104,7 +104,7 @@ class ICentro extends JFrame implements ActionListener{
 
             try{
                 Path filePath = Paths.get("Practica07.txt");
-                OutputStream output = new BufferedOutputStream(Files.newOutputStream(filePath, APPEND));
+                OutputStream output = new BufferedOutputStream(Files.newOutputStream(filePath, CREATE, APPEND));
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output));
 
                 writer.write(desc + "#" + ct + "#" + mu + "#" + dt + "#" + nf + "#" + ci +";\n");
@@ -203,7 +203,7 @@ class ICentro extends JFrame implements ActionListener{
                 boolean isInList = false;
                 try{
                     Path filePath = Paths.get("Practica07.txt");
-                    InputStream input = new BufferedInputStream(Files.newInputStream(filePath));
+                    InputStream input = new BufferedInputStream(Files.newInputStream(filePath, CREATE));
                     BufferedReader reader = new BufferedReader(new InputStreamReader(input));
                     lecture = reader.readLine();                    
                     while(lecture != null){
