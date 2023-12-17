@@ -219,7 +219,6 @@ class ICentro extends JFrame implements ActionListener{
                         
                         lecture = reader.readLine();
                         if(isInList){
-                            System.out.println("HOLA");
                             isInList = false;
                             continue;
                         }
