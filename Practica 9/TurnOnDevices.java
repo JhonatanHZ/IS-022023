@@ -66,5 +66,4 @@ class Lamp implements Connectable{
     }
 }
 class CoffeeMaker extends CAdapter{
-    boolean status;
 }
