@@ -11,7 +11,7 @@ class Practica07{
 
         ICentro principal = new ICentro();
     }
-}
+} 
 
 class ICentro extends JFrame implements ActionListener{
     String desc; 
